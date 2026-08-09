@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "products": [
+    {
+      "key": "bananas",
+      "name": "Bananas",
+      "category": "produce",
+      "aliases": [
+        {
+          "pattern": "BANANAS",
+          "match": "exact",
+          "merchant": "*"
+        },
+        {
+          "pattern": "BANANA",
+          "match": "exact",
+          "merchant": "*"
+        }
+      ]
+    },
+    {
+      "key": "dark-roast-coffee",
+      "name": "Dark roast coffee",
+      "category": "pantry",
+      "aliases": [
+        {
+          "pattern": "DARK COFFEE 500G",
+          "match": "exact",
+          "merchant": "*",
+          "package": "500 g"
+        },
+        {
+          "pattern": "DK COFFEE 450 G",
+          "match": "exact",
+          "merchant": "*",
+          "package": "450 g"
+        },
+        {
+          "pattern": "DARK ROAST 450G",
+          "match": "exact",
+          "merchant": "*",
+          "package": "450 g"
+        }
+      ]
+    },
+    {
+      "key": "durum-pasta",
+      "name": "Durum pasta",
+      "category": "pantry",
+      "aliases": [
+        {
+          "pattern": "DURUM PASTA 500G",
+          "match": "exact",
+          "merchant": "*",
+          "package": "500 g"
+        },
+        {
+          "pattern": "DUR PASTA 500 G",
+          "match": "exact",
+          "merchant": "*",
+          "package": "500 g"
+        }
+      ]
+    },
+    {
+      "key": "free-range-eggs",
+      "name": "Free-range eggs",
+      "category": "dairy and eggs",
+      "aliases": [
+        {
+          "pattern": "EGGS FREE RANGE 12CT",
+          "match": "exact",
+          "merchant": "*",
+          "package": "12 ct"
+        },
+        {
+          "pattern": "FR EGGS 12 CT",
+          "match": "exact",
+          "merchant": "*",
+          "package": "12 ct"
+        }
+      ]
+    },
+    {
+      "key": "oat-milk-barista",
+      "name": "Oat milk, barista",
+      "category": "dairy alternatives",
+      "aliases": [
+        {
+          "pattern": "OAT BARISTA 1L",
+          "match": "exact",
+          "merchant": "*",
+          "package": "1 L"
+        },
+        {
+          "pattern": "OAT BRT 1 L",
+          "match": "exact",
+          "merchant": "*",
+          "package": "1 L"
+        }
+      ]
+    }
+  ]
+}

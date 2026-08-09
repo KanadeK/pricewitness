@@ -1,0 +1,99 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pricewitness"
+version = "0.1.0"
+description = "Turn grocery receipt text into an auditable unit-price history, without cloud AI."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "KanadeK" }
+]
+keywords = [
+  "grocery",
+  "receipts",
+  "price-history",
+  "shrinkflation",
+  "local-first",
+  "sqlite",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Home Economics",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/KanadeK/pricewitness"
+Documentation = "https://github.com/KanadeK/pricewitness#readme"
+Demo = "https://kanadek.github.io/pricewitness/"
+Issues = "https://github.com/KanadeK/pricewitness/issues"
+Changelog = "https://github.com/KanadeK/pricewitness/blob/main/CHANGELOG.md"
+
+[project.scripts]
+pricewitness = "pricewitness.cli:main"
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2.2",
+  "mypy>=1.15",
+  "pytest>=8.3",
+  "pytest-cov>=6.0",
+  "ruff>=0.11",
+  "setuptools>=77",
+  "twine>=6.1",
+  "wheel>=0.45",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pricewitness = ["demo_data/*.json", "demo_data/*.txt"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers --basetemp=.pytest-tmp --cov=pricewitness --cov-report=term-missing --cov-fail-under=90"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["pricewitness"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "if __name__ == .__main__.:",
+  "pragma: no cover",
+  "raise NotImplementedError",
+]
+show_missing = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4", "RUF"]
+allowed-confusables = ["×", "−"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/pricewitness/report.py" = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src", "scripts"]

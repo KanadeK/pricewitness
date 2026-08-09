@@ -1,0 +1,26 @@
+name: Feature request
+description: Propose an evidence-bounded improvement.
+title: "[feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Real workflow problem
+      description: Describe the missing outcome, not only a preferred UI.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Synthetic fixture or public format evidence
+      description: Show the receipt/export form the feature needs to support.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Evidence and privacy boundary
+      description: Explain how the proposal avoids silent guesses and cloud leakage.
+    validations:
+      required: true

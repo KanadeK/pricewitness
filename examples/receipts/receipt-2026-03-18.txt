@@ -1,0 +1,12 @@
+Market Square Foods
+03/18/2026 09:14
+OAT BRT 1 L             $3.79
+DUR PASTA 500 G         $1.89
+DK COFFEE 450 G         $8.99
+BANANA 0.95 KG @ 1.49/KG   $1.42
+FR EGGS 12 CT           $4.40
+LOCAL JAM 250G          $5.20
+SUBTOTAL               $25.69
+TAX                     $0.00
+TOTAL                  $25.69
+MASTERCARD ENDING 0101

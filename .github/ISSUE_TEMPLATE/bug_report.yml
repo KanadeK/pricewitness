@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a reproducible PriceWitness defect using synthetic data.
+title: "[bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach real receipts, loyalty IDs, addresses, or household ledgers."
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: "pricewitness 0.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Synthetic reproduction
+      description: Include a minimal fake receipt and exact command.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - "I confirm this report contains synthetic or fully redacted data."
+    validations:
+      required: true
